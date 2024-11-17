@@ -179,13 +179,13 @@ body {
     margin: 10px;
   }
   .continer img {
-    width: 100%;
+    width: 80%;
     margin: 10px;
   }
   .prep,
   .ingred,
   .instructions {
-    width: 100%;
+    width: 80%;
     margin: 10px;
   }
   .instructions {
