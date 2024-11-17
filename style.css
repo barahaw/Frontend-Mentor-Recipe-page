@@ -1,0 +1,213 @@
+/* Define the custom font */
+@font-face {
+  font-family: YoungSerif-Regular; /* Name of the custom font */
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf); /* Path to the font file */
+}
+
+/* Apply the custom font to elements with the class 'EntezarFont' */
+.EntezarFont {
+  font-family: YoungSerif-Regular;
+}
+@font-face {
+  font-family: Outfit-VariableFont_wght;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+.EntezarFont {
+  font-family: Outfit-VariableFont_wght;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(330, 100%, 98%);
+}
+.continer {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  margin: 20px;
+  border-radius: 30px;
+}
+.continer img {
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 18px;
+  border-radius: 15px;
+}
+.continer .Simple {
+  margin: 10px;
+}
+.continer .description {
+  font-size: 16px;
+  margin: 12px;
+  color: hsl(30, 10%, 34%);
+}
+.prep {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 150px;
+  background-color: hsl(330, 100%, 98%);
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.prep span {
+  font-family: YoungSerif-Regular;
+  font-size: 16px;
+  color: hsl(332, 51%, 32%);
+}
+.prep .list ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 15px;
+  color: hsl(30, 10%, 34%);
+}
+.ingred {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px;
+  gap: 5px;
+}
+.ingred h2 {
+  color: hsl(14, 45%, 36%);
+}
+.ingred ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px;
+  color: hsl(30, 10%, 34%);
+}
+.hr {
+  border: 0.5px solid hsl(30, 18%, 87%);
+  margin: 10px;
+}
+.instructions {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.instructions h2 {
+  color: hsl(14, 45%, 36%);
+}
+.instructions .inst-name {
+  font-family: YoungSerif-Regular;
+  font-size: 16px;
+}
+
+.instructions ol {
+  list-style-type: none; /* Remove default markers */
+  counter-reset: item; /* Reset counter */
+}
+
+.instructions ol li {
+  counter-increment: item; /* Increment counter */
+  margin-bottom: 8px; /* Add some spacing */
+  position: relative; /* Position relative for pseudo-element */
+  padding-left: 20px; /* Space for custom marker */
+}
+
+.instructions ol li::before {
+  content: counter(item) ". ";
+  color: hsl(14, 45%, 36%);
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+.instructions li {
+  color: hsl(30, 10%, 34%); /* Color for the list item text */
+}
+.continer.nutrition {
+  max-width: 600px; /* Optional: adjust to fit your design */
+  margin: 0 auto;
+}
+
+.nutrition h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: hsl(14, 45%, 36%);
+  margin: 15px;
+}
+.continer p {
+  margin: 15px;
+  color: hsl(30, 10%, 34%);
+}
+.nutrition .description {
+  padding: 10px 0;
+}
+
+.nutrition .description-container .descripe-box {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  margin: 5px;
+}
+
+.nutrition .description-container .descripe-box:last-child {
+  border-bottom: none;
+}
+
+.nutrition .description-container .descripe-box div {
+  flex: 1;
+}
+.info {
+  color: hsl(30, 10%, 34%);
+}
+.highlight {
+  font-family: Outfit-VariableFont_wght;
+  color: hsl(14, 45%, 36%);
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .continer {
+    width: 100%;
+    margin: 10px;
+  }
+  .continer img {
+    width: 100%;
+    margin: 10px;
+  }
+  .prep,
+  .ingred,
+  .instructions {
+    width: 100%;
+    margin: 10px;
+  }
+  .instructions {
+    margin: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .continer {
+    width: 70%;
+    margin: 40px auto;
+  }
+  .continer img {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .prep,
+  .ingred,
+  .instructions {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .instructions {
+    margin: 40px auto;
+  }
+}
